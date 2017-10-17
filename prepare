@@ -1,0 +1,2 @@
+export PATH=$HOME/Documents/soft/sdcc/bin:$PATH
+export PATH=$HOME/Documents/soft/gm3p:$PATH
