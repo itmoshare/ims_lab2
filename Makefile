@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # Имя проекта
 
-NAME	= lab1
+NAME	= lab2
 
 # Настройки компилятора и линкера
 
@@ -61,7 +61,11 @@ term:
 LIST_SRC = \
 $(SRC_DIR)/led.c \
 $(SRC_DIR)/max.c \
-$(SRC_DIR)/lab.c
+$(SRC_DIR)/lab2.c \
+$(SRC_DIR)/counter.c \
+$(SRC_DIR)/external.c \
+$(SRC_DIR)/timer.c
+
 
 LIST_OBJ = $(LIST_SRC:.c=.rel)
 
