@@ -62,7 +62,6 @@ void InitTimer()
 	TCON = 0x55;
 	TMOD = 0x1D;
 	//устанавливаем векторы прерываний
-	set_vector(0x200B, (void*)count_handler);
 	set_vector(0x201B, (void*)animation_handler);
 	set_vector(0x2003, (void*)external_handler);
 
