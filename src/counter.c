@@ -6,6 +6,5 @@
 
 void count_handler() interrupt(1)
 {
-	while(true)
-		leds(TH0); //output counter value	
+	 //output counter value	
 }

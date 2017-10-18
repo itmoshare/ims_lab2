@@ -46,22 +46,22 @@ void animation_handler() interrupt(3)
 		organize_step();
 	TH1 = 0xFF;
 	TL1 = 0xFF;
-	ms_count++;
+	ms_count++; //увеличиваем счетчик милисекунд
 }
 
 void InitTimer()
 {
 	ms_count = 0;
-
+	//очищаем счетчик
 	TH0 = 0x00;
 	TL0 = 0x00;
-	
+	//таймер в максимум, чтобы произошло прерывание
 	TH1 = 0xFF;
 	TL1 = 0xFF;
-	
+	//настройка режимов таймеров 
 	TCON = 0x55;
 	TMOD = 0x1D;
-
+	//устанавливаем векторы прерываний
 	set_vector(0x200B, (void*)count_handler);
 	set_vector(0x201B, (void*)animation_handler);
 	set_vector(0x2003, (void*)external_handler);

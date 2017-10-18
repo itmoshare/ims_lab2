@@ -23,18 +23,18 @@ char clear_bit(char* value, int bit_number)
 
 void external_handler() interrupt(2)
 {
-	//disable timer 1 enable timer 0 and oposite
+	//отключаем таймер - выводим значение счетчика, или наоборот по внешнему прерыванию
 
 	if(current_mode = COUNT)
 	{
 		current_mode = ANIM;
 		TCON = set_bit(TCON, 6);
-		TCON = clear_bit(TCON, 4);
 	}
 	else
 	{	
 		current_mode = COUNT;
-		TCON = set_bit(TCON, 4);
 		TCON = clear_bit(TCON, 6);
+		while(true)
+			leds(TH0);
 	}
 }
