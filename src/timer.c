@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <led.h>
 #include <max.h>
+#include <external.h>
+#include <counter.h>
 
 unsigned long ms_count;
 unsigned long last_output_time;
