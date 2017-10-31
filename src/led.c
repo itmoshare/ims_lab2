@@ -85,12 +85,11 @@ void led( unsigned char n, unsigned char on ) {
 
 void leds( unsigned char on ) {
     write_max( SV, on );
-
     old_led = on;
 }
 
-int current_step[8] = {6, 0, 0, 1, 2, 3, 4, 5};
-int current_position[8] = {6, 0, 0, 1, 2, 3, 4, 5};
+static int current_step[8] = {6, 0, 0, 1, 2, 3, 4, 5};
+static int current_position[8] = {6, 0, 0, 1, 2, 3, 4, 5};
 
 bool is_step_doone()
 {
